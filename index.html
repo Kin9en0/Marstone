@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مارستون للمنتجات الأسمنتية | أم القيوين</title>
+<meta name="description" content="مصنع مارستون للمنتجات الأسمنتية في أم القيوين: بلوك أسمنتي، خرسانة جاهزة، ومنتجات خرسانية مسبقة الصب.">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   ★ أماكن الصور (غيّر الروابط من هنا أو من الـ HTML تحت) ★
+   1) الصورة الرئيسية (الهيرو): المتغير --hero-img تحت
+   2) الشعار: ابحث عن  "الشعار"  في الـ HTML
+   3) صورة "من نحن": ابحث عن  "صورة من نحن"
+   4) صور المنتجات: ابحث عن  "صورة منتج"
+   ملحوظة: لو رفعت صورك جنب الملف اكتب اسمها مباشرة مثل: url('hero.jpg')
+   ========================================================== */
+:root{
+  --hero-img: url('images/logo.png'), url('"C:\Users\HERO0\Desktop\برمجه\html\images\logo.png.png"'); /* ← الرئيسية: ضع images/hero.jpg */
+  --ink:#1b1c1e; --stone:#ecebe7; --paper:#f7f6f3; --line:#d4d2cb; --muted:#5e5f63; --rust:#b8431c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--paper);color:var(--ink);line-height:1.8}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+
+/* الهيدر */
+header{position:sticky;top:0;z-index:20;background:rgba(247,246,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:46px;width:auto}
+.brand b{font-size:22px;font-weight:900;letter-spacing:.5px}
+.brand small{display:block;font-size:12px;color:var(--muted);font-weight:600;line-height:1.2}
+nav{display:flex;gap:26px;font-weight:600;font-size:15px}
+nav a:hover{color:var(--rust)}
+.btn{display:inline-block;background:var(--rust);color:#fff;font-weight:800;padding:12px 24px;border-radius:6px;border:0;cursor:pointer;font:inherit;font-weight:800;transition:background .2s}
+.btn:hover{background:#963514}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+@media(max-width:760px){nav{display:none}.brand small{display:none}}
+
+/* الهيرو */
+.hero{background:linear-gradient(90deg,rgba(20,21,23,.9) 15%,rgba(20,21,23,.45)),var(--hero-img);background-size:cover;background-position:center;color:#fff;padding:110px 0 100px}
+.hero h2{font-size:clamp(34px,6vw,64px);font-weight:900;line-height:1.25;max-width:700px}
+.hero p{max-width:540px;margin:22px 0 34px;font-size:18px;color:#dedcd6}
+.hero .row{display:flex;gap:14px;flex-wrap:wrap}
+.rate{margin-top:36px;font-size:14px;color:#cfcdc6}
+.rate b{color:#ffb98f}
+
+/* الأقسام */
+section{padding:84px 0}
+.tag{display:inline-block;color:var(--rust);font-weight:800;font-size:14px;margin-bottom:6px}
+h3.t{font-size:clamp(26px,4vw,38px);font-weight:900;line-height:1.35;margin-bottom:16px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about p{color:var(--muted);font-size:17px}
+.about img{width:100%;height:380px;object-fit:cover;border-radius:4px}
+@media(max-width:820px){.about{grid-template-columns:1fr;gap:28px}}
+
+/* المنتجات */
+.stone{background:var(--stone)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:36px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.card img{height:200px;width:100%;object-fit:cover}
+.card div{padding:20px}
+.card h4{font-size:19px;font-weight:800;margin-bottom:4px}
+.card p{color:var(--muted);font-size:15px}
+
+/* المعلومات */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border:1px solid var(--line);margin-top:36px;background:#fff}
+.info>div{padding:30px;border-inline-start:1px solid var(--line)}
+.info>div:first-child{border-inline-start:0}
+.info h4{font-weight:800;font-size:18px;margin-bottom:8px}
+.info p{color:var(--muted)}
+.info a.tel{display:inline-block;margin-top:8px;font-weight:900;font-size:22px;color:var(--rust)}
+@media(max-width:700px){.info>div{border-inline-start:0;border-top:1px solid var(--line)}.info>div:first-child{border-top:0}}
+
+/* الفورم */
+form{max-width:640px;margin-top:30px;display:grid;gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:4px}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--rust);border-color:var(--rust)}
+
+footer{background:var(--ink);color:#a9a8a3;text-align:center;padding:36px 20px;font-size:14px}
+footer b{color:#fff;font-size:18px;display:block;margin-bottom:6px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#">
+      <!-- ★ الشعار: ضع الشعار في فولدر images باسم logo.png، أو غيّر الرابط في src ★ -->
+      <img src="images/logo.png" alt="شعار مارستون" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 46 46%27%3E%3Crect width=%2746%27 height=%2746%27 rx=%276%27 fill=%27%23b8431c%27/%3E%3Ctext x=%2723%27 y=%2731%27 font-size=%2724%27 font-weight=%27900%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27%3EM%3C/text%3E%3C/svg%3E'">
+      <span><b>مارستون</b><small>للمنتجات الأسمنتية - أم القيوين</small></span>
+    </a>
+    <nav>
+      <a href="#about">من نحن</a>
+      <a href="#products">المنتجات</a>
+      <a href="#info">المواعيد والموقع</a>
+      <a href="#contact">اطلب عرض سعر</a>
+    </nav>
+    <a class="btn" href="tel:+97167666878" dir="ltr">+971 6 766 6878</a>
+  </div>
+</header>
+
+<!-- الصورة الرئيسية تتغير من --hero-img في أعلى الملف -->
+<div class="hero">
+  <div class="wrap">
+    <h2>منتجات أسمنتية بجودة ثابتة، مباشرة من المصنع</h2>
+    <p>نصنّع ونورّد المنتجات الأسمنتية والخرسانية لمشاريع البناء في أم القيوين وباقي الإمارات.</p>
+    <div class="row">
+      <a class="btn" href="#contact">اطلب عرض سعر</a>
+      <a class="btn ghost" href="#products">شاهد المنتجات</a>
+    </div>
+    <p class="rate">تقييم <b>4.1</b> من 5 &nbsp;|&nbsp; 37 تقييم</p>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <span class="tag">من نحن</span>
+      <h3 class="t">مصنع مارستون في قلب أم القيوين</h3>
+      <p>مارستون للمنتجات الأسمنتية مصنع متخصص في إنتاج وتوريد المنتجات الأسمنتية والخرسانية للمقاولين وأصحاب المشاريع، مع التزام بمواعيد التسليم ومواصفات الجودة.</p>
+    </div>
+    <!-- ★ صورة من نحن (غيّر الرابط في src) ★ -->
+    <img src="images/about.jpg" data-fallback="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80" alt="مصنع مارستون">
+  </div>
+</section>
+
+<section id="products" class="stone">
+  <div class="wrap">
+    <span class="tag">منتجاتنا</span>
+    <h3 class="t">منتجات أسمنتية لكل مرحلة من مراحل البناء</h3>
+    <div class="grid">
+      <div class="card">
+        <!-- ★ صورة منتج 1 ★ -->
+        <img src="images/product1.jpg" data-fallback="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="بلوك أسمنتي">
+        <div><h4>بلوك أسمنتي</h4><p>بلوك بناء بمقاسات متعددة للجدران والأسوار والمباني.</p></div>
+      </div>
+      <div class="card">
+        <!-- ★ صورة منتج 2 ★ -->
+        <img src="images/product2.jpg" data-fallback="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80" alt="خرسانة جاهزة">
+        <div><h4>خرسانة جاهزة</h4><p>خلطات خرسانية حسب احتياج المشروع وتوريد بالكميات المطلوبة.</p></div>
+      </div>
+      <div class="card">
+        <!-- ★ صورة منتج 3 ★ -->
+        <img src="images/product3.jpg" data-fallback="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="منتجات خرسانية">
+        <div><h4>منتجات خرسانية مسبقة الصب</h4><p>عناصر خرسانية جاهزة للتركيب توفر الوقت في الموقع.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap">
+    <span class="tag">الموقع والتواصل</span>
+    <h3 class="t">زورنا أو اتصل بنا</h3>
+    <div class="info">
+      <div><h4>الموقع</h4><p>الحزام الأخضر - المقطع 1<br>أم القيوين، الإمارات<br><small>رمز الموقع: GH63+QR8</small></p></div>
+      <div><h4>ساعات العمل</h4><p>فترة صباحية حتى الساعة 2 م<br>ثم فترة مسائية من 4:30 م</p></div>
+      <div><h4>المبيعات</h4><p>للاستفسار وطلب الكميات</p><a class="tel" href="tel:+97167666878" dir="ltr">+971 6 766 6878</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="stone">
+  <div class="wrap">
+    <span class="tag">طلب عرض سعر</span>
+    <h3 class="t">اكتب طلبك وهنوصلك بفريق المبيعات</h3>
+    <form id="f">
+      <div class="two">
+        <div><label for="n">الاسم أو اسم الشركة</label><input id="n" required></div>
+        <div><label for="p">رقم الهاتف</label><input id="p" type="tel" required dir="ltr"></div>
+      </div>
+      <div><label for="k">المنتج المطلوب</label>
+        <select id="k"><option>بلوك أسمنتي</option><option>خرسانة جاهزة</option><option>منتجات خرسانية مسبقة الصب</option><option>استفسار آخر</option></select></div>
+      <div><label for="m">الكمية وتفاصيل المشروع</label><textarea id="m" rows="4"></textarea></div>
+      <button class="btn" type="submit">إرسال الطلب عبر واتساب</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <b>مارستون للمنتجات الأسمنتية</b>
+  الحزام الأخضر - المقطع 1 - أم القيوين - الإمارات<br>© 2026 جميع الحقوق محفوظة
+</footer>
+
+<script>
+/* لو صورتك مش موجودة بيظهر البديل المؤقت */
+function fb(i){if(i.dataset.fallback&&i.src.indexOf(i.dataset.fallback)<0){i.src=i.dataset.fallback}}
+document.querySelectorAll('img[data-fallback]').forEach(i=>{i.addEventListener('error',()=>fb(i));if(i.complete&&i.naturalWidth===0)fb(i)});
+/* ★ رقم الواتساب اللي هيوصله الطلب (بالصيغة الدولية بدون + أو أصفار) ★ */
+const WHATSAPP = "97167666878"; // غيّره لرقم الواتساب الفعلي
+document.getElementById('f').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const text = `طلب عرض سعر\nالاسم: ${v('n')}\nالهاتف: ${v('p')}\nالمنتج: ${v('k')}\nالتفاصيل: ${v('m')}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
+});
+</script>
+</body>
+</html>
